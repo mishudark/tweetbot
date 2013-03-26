@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>browsers</key>
+	<dict>
+		<key>googlechrome-x-callback</key>
+		<dict>
+			<key>name</key>
+			<string>Chrome</string>
+			<key>launchURL</key>
+			<string>googlechrome-x-callback://x-callback-url/open?url=$ENCODED_URL&amp;create-new-tab=1&amp;x-source=Tweetbot&amp;x-success=$X-SUCESS</string>
+		</dict>
+		<key>ophttp</key>
+		<dict>
+			<key>name</key>
+			<string>1Password</string>
+			<key>launchURL</key>
+			<string>op$URL</string>
+		</dict>
+	</dict>
+	<key>screenNameRegex</key>
+	<string>(?x-mi:
+      ((?-mix:[^a-zA-Z0-9_!#\$%&amp;*@＠]|^|RT:?))  # $1: Preceeding character
+      ((?-mix:[@＠]))                       # $2: At mark
+      ([a-zA-Z0-9_]{1,20})                          # $3: Screen name
+      (\/[a-zA-Z][a-zA-Z0-9_\-]{0,24})?             # $4: List (optional)
+    )</string>
+	<key>skipDMiCloudDelete</key>
+	<true/>
+	<key>hashtagStartRegex</key>
+	<string>(?i-mx:((?-mix:\A|\z|[^&amp;a-z0-9_À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿЀ-ӿԀ-ԧⷠ-ⷿꙀ-֑ꚟ-ֿׁ-ׂׄ-ׇׅא-תװ-״﬒-ﬨשׁ-זּטּ-לּמּנּ-סּףּ-פּצּ-ﭏؐ-ؚؠ-ٟٮ-ۓە-ۜ۞-۪ۨ-ۯۺ-ۼۿݐ-ݿࢠࢢ-ࢬࣤ-ࣾﭐ-ﮱﯓ-ﴽﵐ-ﶏﶒ-ﷇﷰ-ﷻﹰ-ﹴﹶ-ﻼ‌-‌ก-ฺเ-๎ᄀ-ᇿ㄰-ㆅꥠ-꥿가-힯ힰ-퟿ﾡ-ￜァ-ヺー-ヾｦ-ﾟ０-９Ａ-Ｚａ-ｚぁ-ゖ゙-ゞ㐀-䶿一-鿿𠀀-𪛟𪜀-𫜿𫝀-𫠟丽-𯨟〃々〻]))(#|＃))</string>
+	<key>stockRegex2</key>
+	<string>(?:^|[ \&apos;\&quot;])\$([a-zA-Z]{1,6})(?=[ \:\.\,\&apos;\&quot;]|$)</string>
+	<key>postToStorify</key>
+	<true/>
+	<key>disableMacBeta</key>
+	<true/>
+	<key>cashtagRegex</key>
+	<string>(?i-mx:(^|(?-mix:[	
+   ᠎               　]))(\$)((?i-mx:[a-z]{1,6}(?:[._][a-z]{1,2})?))(?=$|\s|[!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~]))</string>
+	<key>invalidURLRegex</key>
+	<string>(?i-mx:\A(?i-mx:(?:[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　](?:[-]|[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　])*)?[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　]\.)(?ix-m:
+      (?:
+        (?:ac|ad|ae|af|ag|ai|al|am|an|ao|aq|ar|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|bi|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|
+        ci|ck|cl|cm|cn|co|cr|cs|cu|cv|cx|cy|cz|dd|de|dj|dk|dm|do|dz|ec|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gg|gh|gi|gl|gm|
+        gn|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|
+        lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|nl|no|np|nr|nu|nz|om|pa|pe|
+        pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|sk|sl|sm|sn|so|sr|ss|st|su|sv|sy|sz|tc|td|tf|tg|th|
+        tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|za|zm|zw)
+        (?=[^0-9a-z]|$)
+      )
+    )\Z)</string>
+	<key>tweetbotURLRegex</key>
+	<string>(?i)(tweetbot://(?:[a-zA-Z0-9_]{0,20})/[^\s.]+)</string>
+	<key>urlRegex</key>
+	<string>(?ix-m:
+      (                                                                                     #   $1 total match
+        ((?i-mx:[^A-Z0-9@＠$#＃￾﻿￿‪‫‬‭‮]|^))                                            #   $2 Preceeding chracter
+        (                                                                                   #   $3 URL
+          (https?:\/\/)?                                                                    #   $4 Protocol (optional)
+          ((?ix-m:
+      (?i-mx:(?:[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　](?:[_-]|[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　])*)?[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　]\.)*(?i-mx:(?:[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　](?:[-]|[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　])*)?[^!&quot;#$%&amp;&apos;()*+,-.\/:;&lt;=&gt;?@\[\]^_\`{|}~ 	
+\u0000-\u001F\u007F￾﻿￿‪‫‬‭‮	
+   ᠎               　]\.)
+      (?:(?i-mx:(?:aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|xxx)(?=[^0-9a-z]|$))|(?ix-m:
+      (?:
+        (?:ac|ad|ae|af|ag|ai|al|am|an|ao|aq|ar|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|bi|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|
+        ci|ck|cl|cm|cn|co|cr|cs|cu|cv|cx|cy|cz|dd|de|dj|dk|dm|do|dz|ec|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gg|gh|gi|gl|gm|
+        gn|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|
+        lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|nl|no|np|nr|nu|nz|om|pa|pe|
+        pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|sk|sl|sm|sn|so|sr|ss|st|su|sv|sy|sz|tc|td|tf|tg|th|
+        tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|za|zm|zw)
+        (?=[^0-9a-z]|$)
+      )
+    )|(?i-mx:xn--[0-9a-z]+))
+    ))                                                       #   $5 Domain(s)
+          (?::((?-mix:[0-9]+)))?                                            #   $6 Port number (optional)
+          (\/(?ix-m:
+      (?:
+        (?i-mx:[a-z0-9!\*&apos;;:=\+\,\.\$\/%#\[\]\-_~&amp;|À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿ])*
+        (?:(?i-mx:\((?i-mx:[a-z0-9!\*&apos;;:=\+\,\.\$\/%#\[\]\-_~&amp;|À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿ])+\)) (?i-mx:[a-z0-9!\*&apos;;:=\+\,\.\$\/%#\[\]\-_~&amp;|À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿ])*)*
+        (?i-mx:[a-z0-9=_#\/\+\-À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿ]|(?:(?i-mx:\((?i-mx:[a-z0-9!\*&apos;;:=\+\,\.\$\/%#\[\]\-_~&amp;|À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿ])+\))))
+      )|(?:@(?i-mx:[a-z0-9!\*&apos;;:=\+\,\.\$\/%#\[\]\-_~&amp;|À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿ])+\/)
+    )*)?                                                  #   $7 URL Path and anchor
+          (\?(?i-mx:[a-z0-9!?\*&apos;\(\);:&amp;=\+\$\/%#\[\]\-_\.,~|])*(?i-mx:[a-z0-9_&amp;=#\/]))? #   $8 Query String
+        )
+      )
+    )</string>
+	<key>translateWithBing</key>
+	<true/>
+	<key>smartifyIgnoreLocales</key>
+	<array>
+		<string>ja_JP</string>
+		<string>en_GB</string>
+		<string>en_AU</string>
+		<string>it_IT</string>
+	</array>
+	<key>updateDate</key>
+	<date>2012-10-23T06:07:16Z</date>
+	<key>screenNameStartRegex</key>
+	<string>(?-mix:((?-mix:[^a-zA-Z0-9_!#\$%&amp;*@＠]|^|RT:?))((?-mix:[@＠])))</string>
+	<key>usesAdvancedLengthCounter</key>
+	<true/>
+	<key>hashtagRegex</key>
+	<string>(?i-mx:((?-mix:\A|\z|[^&amp;a-z0-9_À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿЀ-ӿԀ-ԧⷠ-ⷿꙀ-֑ꚟ-ֿׁ-ׂׄ-ׇׅא-תװ-״﬒-ﬨשׁ-זּטּ-לּמּנּ-סּףּ-פּצּ-ﭏؐ-ؚؠ-ٟٮ-ۓە-ۜ۞-۪ۨ-ۯۺ-ۼۿݐ-ݿࢠࢢ-ࢬࣤ-ࣾﭐ-ﮱﯓ-ﴽﵐ-ﶏﶒ-ﷇﷰ-ﷻﹰ-ﹴﹶ-ﻼ‌-‌ก-ฺเ-๎ᄀ-ᇿ㄰-ㆅꥠ-꥿가-힯ힰ-퟿ﾡ-ￜァ-ヺー-ヾｦ-ﾟ０-９Ａ-Ｚａ-ｚぁ-ゖ゙-ゞ㐀-䶿一-鿿𠀀-𪛟𪜀-𫜿𫝀-𫠟丽-𯨟〃々〻]))(#|＃)((?i-mx:[a-z0-9_À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿЀ-ӿԀ-ԧⷠ-ⷿꙀ-֑ꚟ-ֿׁ-ׂׄ-ׇׅא-תװ-״﬒-ﬨשׁ-זּטּ-לּמּנּ-סּףּ-פּצּ-ﭏؐ-ؚؠ-ٟٮ-ۓە-ۜ۞-۪ۨ-ۯۺ-ۼۿݐ-ݿࢠࢢ-ࢬࣤ-ࣾﭐ-ﮱﯓ-ﴽﵐ-ﶏﶒ-ﷇﷰ-ﷻﹰ-ﹴﹶ-ﻼ‌-‌ก-ฺเ-๎ᄀ-ᇿ㄰-ㆅꥠ-꥿가-힯ힰ-퟿ﾡ-ￜァ-ヺー-ヾｦ-ﾟ０-９Ａ-Ｚａ-ｚぁ-ゖ゙-ゞ㐀-䶿一-鿿𠀀-𪛟𪜀-𫜿𫝀-𫠟丽-𯨟〃々〻])*(?i-mx:[a-z_À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿЀ-ӿԀ-ԧⷠ-ⷿꙀ-֑ꚟ-ֿׁ-ׂׄ-ׇׅא-תװ-״﬒-ﬨשׁ-זּטּ-לּמּנּ-סּףּ-פּצּ-ﭏؐ-ؚؠ-ٟٮ-ۓە-ۜ۞-۪ۨ-ۯۺ-ۼۿݐ-ݿࢠࢢ-ࢬࣤ-ࣾﭐ-ﮱﯓ-ﴽﵐ-ﶏﶒ-ﷇﷰ-ﷻﹰ-ﹴﹶ-ﻼ‌-‌ก-ฺเ-๎ᄀ-ᇿ㄰-ㆅꥠ-꥿가-힯ힰ-퟿ﾡ-ￜァ-ヺー-ヾｦ-ﾟ０-９Ａ-Ｚａ-ｚぁ-ゖ゙-ゞ㐀-䶿一-鿿𠀀-𪛟𪜀-𫜿𫝀-𫠟丽-𯨟〃々〻])(?i-mx:[a-z0-9_À-ÖØ-öø-ÿĀ-ɏɓ-ɔɖ-ɗəɛɣɨɯɲʉʋʻ̀-ͯḀ-ỿЀ-ӿԀ-ԧⷠ-ⷿꙀ-֑ꚟ-ֿׁ-ׂׄ-ׇׅא-תװ-״﬒-ﬨשׁ-זּטּ-לּמּנּ-סּףּ-פּצּ-ﭏؐ-ؚؠ-ٟٮ-ۓە-ۜ۞-۪ۨ-ۯۺ-ۼۿݐ-ݿࢠࢢ-ࢬࣤ-ࣾﭐ-ﮱﯓ-ﴽﵐ-ﶏﶒ-ﷇﷰ-ﷻﹰ-ﹴﹶ-ﻼ‌-‌ก-ฺเ-๎ᄀ-ᇿ㄰-ㆅꥠ-꥿가-힯ힰ-퟿ﾡ-ￜァ-ヺー-ヾｦ-ﾟ０-９Ａ-Ｚａ-ｚぁ-ゖ゙-ゞ㐀-䶿一-鿿𠀀-𪛟𪜀-𫜿𫝀-𫠟丽-𯨟〃々〻])*))</string>
+	<key>notices</key>
+	<array>
+		<dict>
+			<key>actionTitle</key>
+			<string>Update</string>
+			<key>endDate</key>
+			<date>3010-02-01T00:00:00Z</date>
+			<key>startDate</key>
+			<date>2011-06-28T16:15:01Z</date>
+			<key>title</key>
+			<string>Update Notice</string>
+			<key>endVersion</key>
+			<integer>900</integer>
+			<key>message</key>
+			<string>Because of changes Twitter has made to the login process, you will need to update Tweetbot before June 30th. Otherwise you won&apos;t be able to fully access your account from Tweetbot. Please note this is a free update.</string>
+			<key>startVersion</key>
+			<integer>1</integer>
+			<key>actionURL</key>
+			<string>itms-apps://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftwareUpdate?id=428851691&amp;mt=8</string>
+		</dict>
+	</array>
+	<key>wrapAllLinks</key>
+	<true/>
+	<key>stockRegex</key>
+	<string>(^|[ \&apos;\&quot;])\$([a-zA-Z]{1,6})(?=[ \:\.\,\&apos;\&quot;]|$)</string>
+</dict>
+</plist>
